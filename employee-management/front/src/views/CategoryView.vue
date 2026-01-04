@@ -1,13 +1,13 @@
 <template>
   <div class="category-container">
     <div class="page-header">
-      <h2>分类管理</h2>
-      <el-button type="primary" @click="handleAdd">添加分类</el-button>
+      <h2>部门管理</h2>
+      <el-button type="primary" @click="handleAdd">添加部门</el-button>
     </div>
     
     <el-table :data="tableData" border style="width: 100%" row-key="id" v-loading="loading">
       <el-table-column prop="id" label="ID" width="80"></el-table-column>
-      <el-table-column prop="name" label="分类名称"></el-table-column>
+      <el-table-column prop="name" label="部门名称"></el-table-column>
       <el-table-column prop="description" label="描述"></el-table-column>
       <el-table-column prop="status" label="状态" width="100">
         <template #default="scope">
@@ -27,12 +27,12 @@
     <!-- 添加/编辑分类对话框 -->
     <el-dialog :title="dialogTitle" v-model="dialogVisible" width="500px">
       <el-form :model="form" :rules="rules" ref="formRef" label-width="100px">
-        <el-form-item label="分类名称" prop="name">
+        <el-form-item label="部门名称" prop="name">
           <el-input v-model="form.name"></el-input>
         </el-form-item>
-        <el-form-item label="父级分类" prop="parentId">
-          <el-select v-model="form.parentId" placeholder="请选择父级分类" style="width: 100%">
-            <el-option :key="0" label="顶级分类" :value="0"></el-option>
+        <el-form-item label="上级部门" prop="parentId">
+          <el-select v-model="form.parentId" placeholder="请选择上级部门" style="width: 100%">
+            <el-option :key="0" label="最高级部门" :value="0"></el-option>
             <el-option v-for="item in categoryOptions" :key="item.id" :label="item.name" :value="item.id"></el-option>
           </el-select>
         </el-form-item>

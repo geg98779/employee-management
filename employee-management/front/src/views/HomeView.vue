@@ -14,19 +14,19 @@
           active-text-color="#409EFF">
           <el-menu-item index="/products">
             <el-icon><el-icon-goods /></el-icon>
-            <span>商品管理</span>
+            <span>员工管理</span>
           </el-menu-item>
           <el-menu-item index="/categories">
             <el-icon><el-icon-folder /></el-icon>
-            <span>分类管理</span>
+            <span>部门管理</span>
           </el-menu-item>
           <el-menu-item index="/suppliers">
             <el-icon><el-icon-user /></el-icon>
-            <span>供应商管理</span>
+            <span>绩效管理</span>
           </el-menu-item>
           <el-menu-item index="/orders">
             <el-icon><el-icon-document /></el-icon>
-            <span>订单管理</span>
+            <span>任务管理</span>
           </el-menu-item>
           <el-menu-item index="/users" v-if="isAdmin">
             <el-icon><el-icon-setting /></el-icon>
